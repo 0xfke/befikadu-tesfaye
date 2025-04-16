@@ -39,9 +39,7 @@ const certifications = {
 export default function CertificationPage({ params }: { params: { slug: string } }) {
   const certification = certifications[params.slug as keyof typeof certifications];
   
-  if (!certification) {
-    notFound();
-  }
+  if (!certification) return notFound();
 
   return (
     <div className="min-h-screen py-20">
