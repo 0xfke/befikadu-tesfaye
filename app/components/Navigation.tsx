@@ -10,12 +10,8 @@ export default function Navigation() {
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
     { name: 'Certifications', path: '/certifications' },
-    { 
-      name: 'Blog', 
-      path: 'https://0xfke.github.io',
-      external: true 
-    },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog'},
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -27,35 +23,20 @@ export default function Navigation() {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              item.external ? (
-                <a
-                  key={item.path}
-                  href={item.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${
-                    pathname === item.path
-                      ? 'text-cyan-400'
-                      : 'text-gray-300 hover:text-cyan-400'
-                  } transition-colors`}
-                >
-                  {item.name}
-                </a>
-              ) : (
+            {navItems.map((item) => {
+              return (
                 <Link
                   key={item.path}
                   href={item.path}
-                  className={`${
-                    pathname === item.path
+                  className={`${pathname === item.path
                       ? 'text-cyan-400'
-                      : 'text-gray-300 hover:text-cyan-400'
-                  } transition-colors`}
+                      : 'text-gray-300 hover:text-cyan-400'} transition-colors`}
                 >
                   {item.name}
                 </Link>
-              )
-            ))}
+              );
+            }
+            )}
           </div>
         </div>
       </div>
