@@ -1,36 +1,39 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTelegram, FaYoutube, FaEnvelope, FaUser, FaMessage } from 'react-icons/fa6';
+// Import the specific icons needed
+import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope, FaUser, FaMessage } from 'react-icons/fa6';
+import { SiTryhackme } from 'react-icons/si'; // Import TryHackMe icon
 
+// Updated socialLinks array
 const socialLinks = [
   {
     name: 'GitHub',
-    url: 'https://github.com/befikadu',
+    url: 'https://github.com/0xfke', // Updated URL
     icon: FaGithub,
     hoverColor: 'hover:text-gray-100',
     bgColor: 'bg-gray-800/50'
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/befikadu',
+    url: 'https://www.linkedin.com/in/befikadu-tesfaye', // Updated URL
     icon: FaLinkedin,
     hoverColor: 'hover:text-blue-400',
     bgColor: 'bg-blue-800/50'
   },
   {
-    name: 'Telegram',
-    url: 'https://t.me/bunabyte',
-    icon: FaTelegram,
-    hoverColor: 'hover:text-blue-400',
-    bgColor: 'bg-blue-800/50'
-  },
-  {
     name: 'YouTube',
-    url: 'https://youtube.com/@bunabyte',
+    url: 'https://www.youtube.com/@bunabyte', // Kept URL
     icon: FaYoutube,
     hoverColor: 'hover:text-red-500',
     bgColor: 'bg-red-800/50'
+  },
+  {
+    name: 'TryHackMe',
+    url: 'https://tryhackme.com/p/0xfke', // Added URL
+    icon: SiTryhackme, // Added Icon
+    hoverColor: 'hover:text-red-400', // Added styling
+    bgColor: 'bg-red-900/50' // Added styling
   }
 ];
 
@@ -49,6 +52,7 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    // Add actual form submission logic here (e.g., API call)
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -85,7 +89,8 @@ export default function ContactSection() {
           >
             {mounted && (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="relative">
+                {/* Form fields remain unchanged */}
+                 <div className="relative">
                   <label
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-300 mb-2"
@@ -175,6 +180,7 @@ export default function ContactSection() {
           >
             <div className="bg-[#1e293b]/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
               <h3 className="text-xl font-semibold text-cyan-400 mb-6">Connect With Me</h3>
+              {/* The mapping logic remains the same, it will now use the updated socialLinks */}
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
@@ -221,4 +227,4 @@ export default function ContactSection() {
       </div>
     </section>
   );
-} 
+}
