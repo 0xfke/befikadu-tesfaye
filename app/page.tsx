@@ -1,14 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ProjectsSection from './components/ProjectsSection';
-import CertificationsSection from './components/CertificationsSection';
-import BlogSection from './components/BlogSection';
-import CommunitySection from './components/CommunitySection';
-import ContactSection from './components/ContactSection';
+import Image from 'next/image'
 
 export default function Home() {
   return (
