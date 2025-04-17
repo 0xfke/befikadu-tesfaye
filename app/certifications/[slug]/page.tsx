@@ -2,14 +2,16 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { use } from 'react'; // Import the 'use' hook from React
 
+// Keep your static certifications data object here
 const certifications = {
   oscp: {
     title: "Offensive Security Certified Professional (OSCP)",
     issuer: "Offensive Security",
     date: "2023",
     image: "/certs/oscp.png",
-    link: "#",
+    link: "#", // Replace with actual link if available
     description: "Proven ability to identify vulnerabilities, execute controlled attacks, and secure systems against real-world threats.",
     skills: ["Penetration Testing", "Exploit Development", "Privilege Escalation"],
     details: [
@@ -24,116 +26,96 @@ const certifications = {
     issuer: "EC-Council",
     date: "2023",
     image: "/certs/ceh.png",
-    link: "#",
-    description: "Demonstrated expertise in ethical hacking methodologies, tools, and techniques for securing systems.",
-    skills: ["Ethical Hacking", "Security Tools", "Vulnerability Assessment"],
+    link: "#", // Replace with actual link if available
+    description: "Comprehensive understanding of ethical hacking methodologies, tools, and techniques used to assess and secure network infrastructures.",
+    skills: ["Network Scanning", "Vulnerability Analysis", "System Hacking", "Web Application Security"],
     details: [
-      "Certified in ethical hacking methodologies",
-      "Proficient in security tools and techniques",
-      "Expertise in vulnerability assessment",
-      "Understanding of security best practices"
+        "Mastered ethical hacking concepts and phases.",
+        "Gained proficiency in using modern security tools.",
+        "Understood attack vectors and countermeasures."
     ]
-  }
+  },
+  // Add other certifications if any
 };
 
-export default function CertificationPage({ params }: { params: { slug: string } }) {
-  const certification = certifications[params.slug as keyof typeof certifications];
-  
-  if (!certification) return notFound();
+// Correctly type 'params' as the Promise 'use()' expects
+export default function CertificationPage({ params }: { params: Promise<{ slug: string }> }) {
+  // Unwrap the params object using React.use()
+  const resolvedParams = use(params);
+  const slug = resolvedParams.slug;
 
+  // Use a type assertion for safer lookup
+  const certification = certifications[slug as keyof typeof certifications];
+
+  // Check if the certification exists for the given slug
+  if (!certification) {
+    notFound(); // Trigger a 404 page if not found
+  }
+
+  // --- Your existing JSX to render the certification details ---
+  // Make sure to use the 'certification' object derived above
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#1e293b]/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-500/20 p-8">
-          <div className="flex flex-col md:flex-row gap-8 mb-8">
-            <div className="relative w-full md:w-64 h-64 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-lg overflow-hidden">
-              <Image
-                src={certification.image}
-                alt={certification.title}
-                fill
-                className="object-contain p-6"
-              />
-            </div>
-            
-            <div className="flex-1 space-y-4">
-              <div>
-                <h1 className="text-3xl font-bold text-cyan-300 mb-2">
-                  {certification.title}
-                </h1>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <span>{certification.issuer}</span>
-                  <span>•</span>
-                  <span>{certification.date}</span>
-                </div>
-              </div>
-
-              <p className="text-gray-300 text-lg">
-                {certification.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {certification.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-sm bg-cyan-500/10 text-cyan-300 rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+    <div className="container mx-auto px-4 py-8 max-w-3xl mt-20"> {/* Added mt-20 for spacing below navbar */} 
+      <Link href="/certifications" className="text-cyan-400 hover:text-cyan-300 mb-6 inline-block">
+        &larr; Back to Certifications
+      </Link>
+      <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg shadow-xl overflow-hidden p-6 md:p-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center mb-6">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-6 flex justify-center">
+             {certification.image && (
+               <Image
+                 src={certification.image}
+                 alt={`${certification.title} Certificate`}
+                 width={200} // Adjust size as needed
+                 height={140} // Adjust size as needed
+                 className="rounded-md object-contain shadow-md"
+               />
+             )}
           </div>
-
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-cyan-300">Certification Details</h2>
-            
-            <ul className="space-y-3">
-              {certification.details.map((detail, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-300">
-                  <svg
-                    className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {detail}
-                </li>
-              ))}
-            </ul>
-
-            <div className="pt-6">
-              <Link
-                href={certification.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                View Certificate
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </Link>
-            </div>
+          <div className="w-full md:w-2/3">
+            <h1 className="text-3xl font-bold text-cyan-400 mb-2">{certification.title}</h1>
+            <p className="text-lg text-gray-300 mb-1"><span className="font-semibold">Issuer:</span> {certification.issuer}</p>
+            <p className="text-lg text-gray-300"><span className="font-semibold">Date:</span> {certification.date}</p>
+             {certification.link && certification.link !== "#" && (
+               <a
+                 href={certification.link}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="text-cyan-500 hover:text-cyan-300 transition-colors mt-2 inline-block"
+               >
+                 Verify Credential &rarr;
+               </a>
+             )}
           </div>
         </div>
+
+        <div className="mb-6">
+          <h2 className="text-2xl font-semibold text-cyan-500 mb-3 border-b border-cyan-500/30 pb-1">Description</h2>
+          <p className="text-gray-300 leading-relaxed">{certification.description}</p>
+        </div>
+
+        {certification.skills && certification.skills.length > 0 && (
+          <div className="mb-6">
+            <h2 className="text-2xl font-semibold text-cyan-500 mb-3 border-b border-cyan-500/30 pb-1">Skills Demonstrated</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              {certification.skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {certification.details && certification.details.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-semibold text-cyan-500 mb-3 border-b border-cyan-500/30 pb-1">Details</h2>
+            <ul className="list-disc list-inside text-gray-300 space-y-1">
+              {certification.details.map((detail, index) => (
+                <li key={index}>{detail}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
-} 
+}
