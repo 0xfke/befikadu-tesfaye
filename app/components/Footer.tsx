@@ -8,19 +8,19 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center">
         {/* Social Icons Section */}
         <div className="flex justify-center space-x-6 mb-4">
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-cyan-400 transition-colors">
+          <a href="https://www.linkedin.com/in/befikadu-tesfaye/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-cyan-400 transition-colors">
             <FaLinkedin size={24} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-cyan-400 transition-colors">
+          <a href="https://x.com/0xfke" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-cyan-400 transition-colors">
             <FaTwitter size={24} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-cyan-400 transition-colors">
+          <a href="https://www.youtube.com/@bunabyte?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-cyan-400 transition-colors">
             <FaYoutube size={24} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-cyan-400 transition-colors">
+          <a href="https://github.com/0xfke" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-cyan-400 transition-colors">
             <FaGithub size={24} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="hover:text-cyan-400 transition-colors">
+          <a href="https://t.me/bunabytecs" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="hover:text-cyan-400 transition-colors">
             <FaTelegram size={24} />
           </a>
         </div>

@@ -14,19 +14,19 @@ export default function Projects() {
       category: "Web Platform"
     },
     {
-      title: "Ethiopian Security Research",
-      description: "Research project analyzing cybersecurity threats and vulnerabilities in Ethiopian digital infrastructure.",
+      title: "Malware Detection and Analysis using Machine Learning ",
+      description: "A user-friendly web application that leverages static analysis and machine learning to detect and analyze malware in files, URLs, and executables with real-time threat assessment.",
       technologies: ["Python", "Security Tools", "Data Analysis"],
-      link: "https://github.com/0xfke/ethiopian-security-research",
-      image: "/images/projects/security-research.jpg",
+      link: "https://0xfke.github.io/posts/projectmdaml/",
+      image: "/images/projects/mdmal.png",
       category: "Research"
     },
     {
       title: "Security Training Platform",
-      description: "Interactive platform for cybersecurity training and certification in local languages.",
+      description: "BunaByte Cybersecurity  Bootcamp – A hands-on training program that teaches cybersecurity from fundamentals to advanced hacking through CTFs, labs, and real-world exercises.",
       technologies: ["React", "Node.js", "AWS", "Localization"],
-      link: "https://github.com/0xfke/security-training",
-      image: "/images/projects/training-platform.jpg",
+      link: "https://www.linkedin.com/company/buna-byte",
+      image: "/images/projects/IEH-Logo.png",
       category: "Education"
     }
   ];

@@ -6,20 +6,20 @@ import Image from 'next/image';
 export default function Certifications() {
   const certifications = [
     {
-      slug: "oscp",
-      title: "Offensive Security Certified Professional (OSCP)",
-      issuer: "Offensive Security",
+      slug: "GCSP",
+      title: "Google CyberSecurity Certified Professional (GCSP)",
+      issuer: "Google",
       date: "2023",
-      image: "/certs/oscp.png",
+      image: "/certs/Gcsp.png",
       description: "Proven ability to identify vulnerabilities, execute controlled attacks, and secure systems against real-world threats.",
       skills: ["Penetration Testing", "Exploit Development", "Privilege Escalation"]
     },
     {
-      slug: "ceh",
-      title: "Certified Ethical Hacker (CEH)",
-      issuer: "EC-Council",
-      date: "2023",
-      image: "/certs/ceh.png",
+      slug: "CCSOCA",
+      title: "Cybertalents Certified SOC Analyst (CCSOCA)",
+      issuer: "Cybertalents",
+      date: "2025",
+      image: "/certs/cybertalents-socA.png",
       description: "Demonstrated expertise in ethical hacking methodologies, tools, and techniques for securing systems.",
       skills: ["Ethical Hacking", "Security Tools", "Vulnerability Assessment"]
     }

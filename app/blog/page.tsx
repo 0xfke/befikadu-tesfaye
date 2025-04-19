@@ -5,31 +5,31 @@ import Image from 'next/image';
 
 const blogPosts = [
   {
-    slug: "understanding-cyber-threats",
-    title: "Understanding Modern Cyber Threats",
-    excerpt: "An in-depth analysis of current cybersecurity threats and how to protect against them.",
-    date: "April 15, 2024",
+    slug: "0xfke.github.io/posts/Try-Hack-Me-Wgel-ctf",
+    title: "TryHackMe | Wgel CTF Write Up 01",
+    excerpt: "This CTF (Capture The Flag) challenge is a Easy level Linux box focused on privilege escalation and enumeration. The goal is to gain access to the system, escalate privileges to root, and retrieve the necessary flags.",
+    date: "April 1, 2025",
     readTime: "5 min read",
-    image: "/images/blog/cyber-threats.jpg",
-    category: "Cybersecurity"
+    image: "/images/blog/wglectf.webp",
+    category: "CTF Writeups"
   },
   {
-    slug: "ethical-hacking-guide",
-    title: "Getting Started with Ethical Hacking",
-    excerpt: "A comprehensive guide for beginners interested in ethical hacking and penetration testing.",
-    date: "April 10, 2024",
-    readTime: "8 min read",
-    image: "/images/blog/ethical-hacking.jpg",
+    slug: "0xfke.github.io/posts/injection-attacks",
+    title: "Injection Attacks",
+    excerpt: "Injection flaws occur when user-controlled input is interpreted as commands or parameters by an application. They are common and can lead to serious security risks, depending on the technologies used and how the input is processed.",
+    date: "Jan 26, 2025",
+    readTime: "3 min read",
+    image: "/images/blog/injection_attacks.png",
     category: "Ethical Hacking"
   },
   {
-    slug: "secure-coding-practices",
-    title: "Secure Coding Best Practices",
-    excerpt: "Essential security practices every developer should follow to write secure code.",
-    date: "April 5, 2024",
+    slug: "0xfke.github.io/posts/Write-Up-on-TryHackMe-Rooms",
+    title: "Write Up on TryHackMe CTF Challenges",
+    excerpt: "Welcome to my latest cybersecurity journey! I am launching a comprehensive TryHackMe walkthrough series, covering different rooms across various cybersecurity fields. This walkthrough aims to guide both beginners",
+    date: "Mar 28, 2025",
     readTime: "6 min read",
-    image: "/images/blog/secure-coding.jpg",
-    category: "Development"
+    image: "/images/blog/bbcswritup.png",
+    category: "Cybersecurity"
   }
 ];
 
@@ -61,7 +61,7 @@ export default function Blog() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`https://${post.slug}`}>
                   <div className="bg-[#1e293b]/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/40 transition-colors h-full">
                     <div className="relative h-48">
                       <Image

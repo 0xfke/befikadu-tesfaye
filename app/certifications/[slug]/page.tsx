@@ -6,27 +6,27 @@ import { use } from 'react'; // Import the 'use' hook from React
 
 // Keep your static certifications data object here
 const certifications = {
-  oscp: {
-    title: "Offensive Security Certified Professional (OSCP)",
-    issuer: "Offensive Security",
+  GCSP: {
+    title: "Google CyberSecurity Certified Professional (GCSP)",
+    issuer: "Google",
     date: "2023",
-    image: "/certs/oscp.png",
-    link: "#", // Replace with actual link if available
+    image: "/certs/Gcsp.png",
+    link: "https://www.coursera.org/account/accomplishments/specialization/KWWYT3V2V5VM", // Replace with actual link if available
     description: "Proven ability to identify vulnerabilities, execute controlled attacks, and secure systems against real-world threats.",
     skills: ["Penetration Testing", "Exploit Development", "Privilege Escalation"],
     details: [
-      "Successfully completed the OSCP certification exam",
+      "Successfully completed the GCSP certification exam",
       "Demonstrated practical penetration testing skills",
       "Proven ability to identify and exploit vulnerabilities",
       "Hands-on experience with various security tools and techniques"
     ]
   },
-  ceh: {
-    title: "Certified Ethical Hacker (CEH)",
-    issuer: "EC-Council",
+  CCSOCA: {
+    title: "Cybertalents Certified SOC Analyst (CCSOCA)",
+    issuer: "Cybertalents",
     date: "2023",
-    image: "/certs/ceh.png",
-    link: "#", // Replace with actual link if available
+    image: "/certs/cybertalents-socA.png",
+    link: "https://cybertalents.com/certifications/70932921-de48-4721-99cc-6727e2a117d3", // Replace with actual link if available
     description: "Comprehensive understanding of ethical hacking methodologies, tools, and techniques used to assess and secure network infrastructures.",
     skills: ["Network Scanning", "Vulnerability Analysis", "System Hacking", "Web Application Security"],
     details: [
