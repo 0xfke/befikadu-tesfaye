@@ -15,8 +15,8 @@ export default function About() {
           
           <div className="space-y-6">
             <p className="text-gray-300 text-lg">
-              I am a passionate cybersecurity researcher and ethical hacker, dedicated to building a safer digital Ethiopia. 
-              As the founder of Buna Byte, I work to strengthen cybersecurity awareness and capabilities in the region.
+            I am a self-taught cybersecurity researcher, penetration tester, and ethical hacker with a strong passion for security and innovation. 
+            I thrive on exploring cybersecurity challenges, breaking things ethically to make them safe, and sharing knowledge with others.
             </p>
             
             <div>
@@ -46,17 +46,17 @@ export default function About() {
               <h2 className="text-2xl font-semibold text-cyan-300 mb-4">Experience</h2>
               <div className="space-y-4">
                 <div className="border-l-4 border-cyan-500 pl-4">
-                  <h3 className="text-xl font-medium text-cyan-300">Founder & Security Researcher</h3>
-                  <p className="text-gray-400">Buna Byte • 2020 - Present</p>
+                  <h3 className="text-xl font-medium text-cyan-300">Instructor & Security Researcher</h3>
+                  <p className="text-gray-400">Buna Byte Cybersecurity • 2024 - Present</p>
                   <p className="text-gray-300 mt-2">
                     Leading cybersecurity initiatives, conducting research, and building security awareness in Ethiopia.
                   </p>
                 </div>
                 <div className="border-l-4 border-cyan-500 pl-4">
-                  <h3 className="text-xl font-medium text-cyan-300">Security Consultant</h3>
-                  <p className="text-gray-400">Previous Company • 2018 - 2020</p>
+                  <h3 className="text-xl font-medium text-cyan-300">National Cybertalent</h3>
+                  <p className="text-gray-400">INSA • 2024 - present</p>
                   <p className="text-gray-300 mt-2">
-                    Provided security consulting services, conducted penetration tests, and implemented security solutions.
+                  Participated in a Cybersecurity Summer Camp, gaining hands-on experience in ethical hacking, CTFs, malware detection and analysis, and AI-driven cybersecurity.
                   </p>
                 </div>
               </div>
