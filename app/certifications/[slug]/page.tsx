@@ -24,7 +24,7 @@ const certifications = {
   CCSOCA: {
     title: "Cybertalents Certified SOC Analyst (CCSOCA)",
     issuer: "Cybertalents",
-    date: "2023",
+    date: "2025",
     image: "/certs/cybertalents-socA.png",
     link: "https://cybertalents.com/certifications/70932921-de48-4721-99cc-6727e2a117d3", // Replace with actual link if available
     description: "The certification validates my ability to understand and operate within a SOC environment, including real-time threat monitoring, incident response, and cyberattack mitigation.",
@@ -36,6 +36,24 @@ const certifications = {
         "Work with SOC tools and technologies in simulated attack environments"
     ]
   },
+  ICS: {
+    title: "Introduction to Cybersecurity Bootcamp (ICS)",
+    issuer: "Cybertalents",
+    date: "2024",
+    image: "/certs/cybertalents-cysec-bootcamp.jpg",
+    link: "https://cybertalents.com/certifications/08064a70-a038-4daa-980e-dd7c1349e9de", // Replace with actual link if available
+    description: "This certification from CyberTalents validates my skills in cybersecurity, including Traffic Analysis, OWASP, Steganography, Burp Suite, and web security. The bootcamp provided hands-on experience in analyzing network traffic, identifying web vulnerabilities, and using advanced tools to enhance security measures.",
+    skills: ["Traffic Analysis", "OWASP", "Steganography", "Burp Suite", "web security"],
+    details: [
+        "Understanding key domains in cybersecurity including Web Exploitation, Reverse Engineering, Cryptography, and Digital Forensics",
+        "Applying theoretical knowledge through real-world examples taken from past international CTF challenges",
+        "Analyzing and solving cybersecurity problems using a hands-on, challenge-driven approach",
+        "Gaining exposure to offensive security concepts and methodologies used by ethical hackers and security professionals"
+    ]
+  }
+  
+  
+
   // Add other certifications if any
 };
 

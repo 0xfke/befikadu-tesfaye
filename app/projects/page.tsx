@@ -10,7 +10,7 @@ export default function Projects() {
       description: "A cybersecurity platform focused on building security awareness and capabilities in Ethiopia.",
       technologies: ["Canva", "Capcut", "Adobe"],
       link: "https://www.youtube.com/@bunabyte",
-      image: "/images/projects/buna-byte.jpg",
+      image: "/images/projects/bbcs-yt.png",
       category: "Education"
     },
     {

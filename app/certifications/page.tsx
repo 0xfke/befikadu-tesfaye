@@ -14,6 +14,9 @@ export default function Certifications() {
       description: "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity.",
       skills: ["Network Security", "SIEM tools", "Linux", "Cloud Computing", "Intrusion Detection Systems (IDS)", "Python Programming", "SQL"]
     },
+
+    // Cybertalents Certification
+
     {
       slug: "CCSOCA",
       title: "Cybertalents Certified SOC Analyst (CCSOCA)",
@@ -22,6 +25,15 @@ export default function Certifications() {
       image: "/certs/cybertalents-socA.png",
       description: "The certification validates my ability to understand and operate within a SOC environment, including real-time threat monitoring, incident response, and cyberattack mitigation.",
       skills: ["Security Information and Event Management", "Splunk", "Digital Forensics", "Incident Response", "Web Security Analysis", "Endpoint Security", "Network Security"]
+    },
+    {
+      slug: "ICS",
+      title: "Introduction to Cybersecurity Bootcamp (ICS)",
+      issuer: "Cybertalents",
+      date: "2024",
+      image: "/certs/cybertalents-cysec-bootcamp.jpg",
+      description: "This certification from CyberTalents validates my skills in cybersecurity, including Traffic Analysis, OWASP, Steganography, Burp Suite, and web security. The bootcamp provided hands-on experience in analyzing network traffic, identifying web vulnerabilities, and using advanced tools to enhance security measures.",
+      skills: ["Traffic Analysis", "OWASP", "Steganography", "Burp Suite", "web security"]
     }
   ];
 
