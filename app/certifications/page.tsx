@@ -11,8 +11,8 @@ export default function Certifications() {
       issuer: "Google",
       date: "2023",
       image: "/certs/Gcsp.png",
-      description: "Proven ability to identify vulnerabilities, execute controlled attacks, and secure systems against real-world threats.",
-      skills: ["Penetration Testing", "Exploit Development", "Privilege Escalation"]
+      description: "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity.",
+      skills: ["Network Security", "SIEM tools", "Linux", "Cloud Computing", "Intrusion Detection Systems (IDS)", "Python Programming", "SQL"]
     },
     {
       slug: "CCSOCA",
@@ -20,8 +20,8 @@ export default function Certifications() {
       issuer: "Cybertalents",
       date: "2025",
       image: "/certs/cybertalents-socA.png",
-      description: "Demonstrated expertise in ethical hacking methodologies, tools, and techniques for securing systems.",
-      skills: ["Ethical Hacking", "Security Tools", "Vulnerability Assessment"]
+      description: "The certification validates my ability to understand and operate within a SOC environment, including real-time threat monitoring, incident response, and cyberattack mitigation.",
+      skills: ["Security Information and Event Management", "Splunk", "Digital Forensics", "Incident Response", "Web Security Analysis", "Endpoint Security", "Network Security"]
     }
   ];
 

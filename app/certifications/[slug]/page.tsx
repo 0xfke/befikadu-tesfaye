@@ -12,13 +12,13 @@ const certifications = {
     date: "2023",
     image: "/certs/Gcsp.png",
     link: "https://www.coursera.org/account/accomplishments/specialization/KWWYT3V2V5VM", // Replace with actual link if available
-    description: "Proven ability to identify vulnerabilities, execute controlled attacks, and secure systems against real-world threats.",
-    skills: ["Penetration Testing", "Exploit Development", "Privilege Escalation"],
+    description: "Those who earn the Google Cybersecurity Certificate have completed eight courses, developed by Google, that include hands-on, practice-based assessments and are designed to prepare them for entry-level roles in cybersecurity. They are competent in beginner-level Python, Linux, SQL, Security Information and Event Management (SIEM) tools, and Intrusion Detection Systems (IDS). They know how to identify common cybersecurity risks, threats, and vulnerabilities, as well as the techniques to mitigate.",
+    skills: ["Network Security", "SIEM tools", "Linux", "Cloud Computing", "Intrusion Detection Systems (IDS)", "Python Programming", "SQL"],
     details: [
-      "Successfully completed the GCSP certification exam",
-      "Demonstrated practical penetration testing skills",
-      "Proven ability to identify and exploit vulnerabilities",
-      "Hands-on experience with various security tools and techniques"
+      "Understand the importance of cybersecurity practices and their impact for organizations.",
+      "Protect networks, devices, people, and data from unauthorized access and cyberattacks using Security Information and Event Management (SIEM) tools.",
+      "Identify common risks, threats, and vulnerabilities, as well as techniques to mitigate them.",
+      "Gain hands-on experience with Python, Linux, and SQL."
     ]
   },
   CCSOCA: {
@@ -27,12 +27,13 @@ const certifications = {
     date: "2023",
     image: "/certs/cybertalents-socA.png",
     link: "https://cybertalents.com/certifications/70932921-de48-4721-99cc-6727e2a117d3", // Replace with actual link if available
-    description: "Comprehensive understanding of ethical hacking methodologies, tools, and techniques used to assess and secure network infrastructures.",
-    skills: ["Network Scanning", "Vulnerability Analysis", "System Hacking", "Web Application Security"],
+    description: "The certification validates my ability to understand and operate within a SOC environment, including real-time threat monitoring, incident response, and cyberattack mitigation.",
+    skills: ["Security Information and Event Management", "Splunk", "Digital Forensics", "Incident Response", "Web Security Analysis", "Endpoint Security", "Network Security"],
     details: [
-        "Mastered ethical hacking concepts and phases.",
-        "Gained proficiency in using modern security tools.",
-        "Understood attack vectors and countermeasures."
+        "Understand core SOC operations, roles, and responsibilities",
+        "Perform real-time threat detection, monitoring, and incident response",
+        "Analyze cybersecurity incidents and apply remediation techniques",
+        "Work with SOC tools and technologies in simulated attack environments"
     ]
   },
   // Add other certifications if any
