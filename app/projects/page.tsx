@@ -6,17 +6,17 @@ import Image from 'next/image';
 export default function Projects() {
   const projects = [
     {
-      title: "Buna Byte Platform",
+      title: "Buna Byte Cybersecurity",
       description: "A cybersecurity platform focused on building security awareness and capabilities in Ethiopia.",
-      technologies: ["React", "Node.js", "MongoDB", "Docker"],
-      link: "https://github.com/0xfke/buna-byte",
+      technologies: ["Canva", "Capcut", "Adobe"],
+      link: "https://www.youtube.com/@bunabyte",
       image: "/images/projects/buna-byte.jpg",
-      category: "Web Platform"
+      category: "Education"
     },
     {
       title: "Malware Detection and Analysis using Machine Learning ",
       description: "A user-friendly web application that leverages static analysis and machine learning to detect and analyze malware in files, URLs, and executables with real-time threat assessment.",
-      technologies: ["Python", "Security Tools", "Data Analysis"],
+      technologies: ["Python", "Security Tools", "Data Analysis", "Machine Learning"],
       link: "https://0xfke.github.io/posts/projectmdaml/",
       image: "/images/projects/mdmal.png",
       category: "Research"
@@ -24,7 +24,7 @@ export default function Projects() {
     {
       title: "Security Training Platform",
       description: "BunaByte Cybersecurity  Bootcamp – A hands-on training program that teaches cybersecurity from fundamentals to advanced hacking through CTFs, labs, and real-world exercises.",
-      technologies: ["React", "Node.js", "AWS", "Localization"],
+      technologies: ["Linux", "Networking", "Web", "Localization"],
       link: "https://www.linkedin.com/company/buna-byte",
       image: "/images/projects/IEH-Logo.png",
       category: "Education"
