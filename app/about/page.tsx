@@ -27,7 +27,6 @@ export default function About() {
                   'Vulnerability Assessment',
                   'Network Security',
                   'Web Application Security',
-                  'Exploit Development',
                   'Security Tools',
                   'Python',
                   'Bash Scripting'
