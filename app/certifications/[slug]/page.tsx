@@ -50,6 +50,37 @@ const certifications = {
         "Analyzing and solving cybersecurity problems using a hands-on, challenge-driven approach",
         "Gaining exposure to offensive security concepts and methodologies used by ethical hackers and security professionals"
     ]
+  },
+
+  ICA: {
+    title: "Introduction to Cyber Attacks",
+    issuer: "New York University",
+    date: "2024",
+    image: "/certs/NYU1.png",
+    link: "https://www.coursera.org/account/accomplishments/verify/THK6R35US4XC", // Replace with actual link if available
+    description: "Successfully completed a foundational course focused on cybersecurity threats, system vulnerabilities, and risk assessment methodologies. This certification demonstrates a solid understanding of how modern cyberattacks are constructed, executed, and mitigated within real-world systems.",
+    skills: ["Risk Assessment", "Security Engineering", "Denial-Of-Service Attack (DOS)", "Information Security (INFOSEC)", "Cyberattacks"],
+    details: [
+        "Identifying and analyzing common cybersecurity threats and vulnerabilities",
+        "Applying security models such as the CIA (Confidentiality, Integrity, Availability) triad to real-world threat scenarios",
+        "Conducting basic cybersecurity risk analysis using threat-asset matrices and prioritization techniques",
+        "Mapping cyber threats and vulnerabilities in the context of secure system engineering practices"
+    ]
+  },
+
+  TDM: {
+    title: "Real-Time Cyber Threat Detection and Mitigation",
+    issuer: "New York University",
+    date: "2024",
+    image: "/certs/NYU2.png",
+    link: "https://www.coursera.org/account/accomplishments/verify/CX7MBN4P7FS4", // Replace with actual link if available
+    description: "Successfully completed a course focused on real-time cybersecurity strategies within the context of TCP/IP protocol suites and enterprise network environments.",
+    skills: ["Risk Assessment", "Security Engineering", "Information Security (INFOSEC)", "Cyberattacks"],
+    details: [
+        "Understanding fundamental TCP/IP security vulnerabilities and common network-based attacks",
+        "Gaining insight into Advanced Persistent Threats (APTs), Distributed Denial of Service (DDoS) attacks, and third-party risks targeting enterprise systems",
+        "Exploring the necessity for network security through real-world examples of TCP/IP exploits"
+    ]
   }
   
   

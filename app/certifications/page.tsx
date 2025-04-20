@@ -34,7 +34,30 @@ export default function Certifications() {
       image: "/certs/cybertalents-cysec-bootcamp.jpg",
       description: "This certification from CyberTalents validates my skills in cybersecurity, including Traffic Analysis, OWASP, Steganography, Burp Suite, and web security. The bootcamp provided hands-on experience in analyzing network traffic, identifying web vulnerabilities, and using advanced tools to enhance security measures.",
       skills: ["Traffic Analysis", "OWASP", "Steganography", "Burp Suite", "web security"]
+    },
+
+    // New York University Certification
+    {
+      slug: "ICA",
+      title: "Introduction to Cyber Attacks",
+      issuer: "New York University",
+      date: "2024",
+      image: "/certs/NYU1.png",
+      description: "Successfully completed a foundational course focused on cybersecurity threats, system vulnerabilities, and risk assessment methodologies. This certification demonstrates a solid understanding of how modern cyberattacks are constructed, executed, and mitigated within real-world systems.",
+      skills: ["Risk Assessment", "Security Engineering", "Denial-Of-Service Attack (DOS)", "Information Security (INFOSEC)", "Cyberattacks"]
+    },
+    {
+      slug: "TDM",
+      title: "Real-Time Cyber Threat Detection and Mitigation",
+      issuer: "New York University",
+      date: "2024",
+      image: "/certs/NYU2.png",
+      description: "Successfully completed a course focused on real-time cybersecurity strategies within the context of TCP/IP protocol suites and enterprise network environments.",
+      skills: ["Risk Assessment", "Security Engineering", "Information Security (INFOSEC)", "Cyberattacks"]
     }
+
+    // Add other certifications if any
+
   ];
 
   return (
