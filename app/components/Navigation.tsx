@@ -13,7 +13,10 @@ export default function Navigation() {
     { name: 'Projects', path: '/projects' },
     { name: 'Certifications', path: '/certifications' },
     { name: 'Blog', path: '/blog'},
-    { name: 'Contact', path: '/contact' }
+    { name: 'Skills', path: '/skills' },
+    { name: 'Badges', path: '/badges' },
+    { name: 'Resume', path: '/resume' }, // <-- Added Resume link
+    { name: 'Contact', path: '/contact' } 
   ];
 
   const toggleMobileMenu = () => {
