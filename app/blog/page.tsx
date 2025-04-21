@@ -1,9 +1,12 @@
 'use client';
+
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+// Link component is no longer needed for the external blog posts
 import Image from 'next/image';
 
 const blogPosts = [
+  // ... (keep existing blogPosts array) ...
   {
     slug: "0xfke.github.io/posts/Try-Hack-Me-Wgel-ctf",
     title: "TryHackMe | Wgel CTF Write Up 01",
@@ -34,6 +37,42 @@ const blogPosts = [
 ];
 
 export default function Blog() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(''); // 'subscribing', 'success', 'error'
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!email) return; // Simple validation
+
+    setStatus('subscribing');
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setEmail(''); // Clear input
+      } else {
+        const errorData = await response.json();
+        console.error('Subscription failed:', errorData);
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Error subscribing:', error);
+      setStatus('error');
+    }
+  };
+
   return (
     <div className="min-h-screen py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,10 +98,16 @@ export default function Blog() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
+                className="group h-full" // Ensure motion.div takes full height if needed
               >
-                <Link href={`https://${post.slug}`}>
-                  <div className="bg-[#1e293b]/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/40 transition-colors h-full">
+                {/* Use standard <a> tag for external links */}
+                <a 
+                  href={`https://${post.slug}`}
+                  target="_blank" // Open in new tab
+                  rel="noopener noreferrer" // Security measure for target="_blank"
+                  className="block h-full" // Make the link fill the motion.div
+                >
+                  <div className="bg-[#1e293b]/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-500/40 transition-colors h-full flex flex-col">
                     <div className="relative h-48">
                       <Image
                         src={post.image}
@@ -75,22 +120,24 @@ export default function Blog() {
                       </div>
                     </div>
                     
-                    <div className="p-6 space-y-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-400">
-                        <span>{post.date}</span>
-                        <span>•</span>
-                        <span>{post.readTime}</span>
+                    <div className="p-6 space-y-4 flex-grow flex flex-col justify-between"> {/* Adjust padding/flex for content */}
+                      <div> {/* Content wrapper */}
+                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                          <span>{post.date}</span>
+                          <span>•</span>
+                          <span>{post.readTime}</span>
+                        </div>
+                        
+                        <h2 className="text-xl font-semibold text-cyan-300 group-hover:text-cyan-400 transition-colors mt-2 mb-2">
+                          {post.title}
+                        </h2>
+                        
+                        <p className="text-gray-300 text-sm mb-4">
+                          {post.excerpt}
+                        </p>
                       </div>
                       
-                      <h2 className="text-xl font-semibold text-cyan-300 group-hover:text-cyan-400 transition-colors">
-                        {post.title}
-                      </h2>
-                      
-                      <p className="text-gray-300">
-                        {post.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                      <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors mt-auto"> {/* Push 'Read more' down */}
                         Read more
                         <svg
                           className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -108,12 +155,12 @@ export default function Blog() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
 
-          {/* Newsletter Signup */}
+          {/* Newsletter Signup (Keep existing code) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,19 +173,29 @@ export default function Blog() {
             <p className="text-gray-300 mb-6">
               Subscribe to my newsletter for the latest insights and updates.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={handleEmailChange}
+                required
                 className="flex-1 px-4 py-2 rounded-lg bg-[#1e293b] border border-cyan-500/20 focus:border-cyan-500/40 focus:outline-none text-white"
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+                disabled={status === 'subscribing'}
+                className="px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {status === 'subscribing' ? 'Subscribing...' : 'Subscribe'}
               </button>
             </form>
+            {status === 'success' && (
+              <p className="text-green-400 text-center mt-4">Successfully subscribed! Thank you.</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-400 text-center mt-4">Subscription failed. Please try again later.</p>
+            )}
           </motion.div>
         </motion.div>
       </div>

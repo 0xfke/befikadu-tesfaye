@@ -26,7 +26,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright Notice */}
-        <p>&copy; {new Date().getFullYear()} Befikadu Tesfaye. All rights reserved.</p>
+        {/* Temporarily using a static year to debug hydration */} 
+        <p>&copy; 2025 Befikadu Tesfaye. All rights reserved.</p> 
       </div>
     </footer>
   );
