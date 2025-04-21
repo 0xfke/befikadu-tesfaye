@@ -22,6 +22,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         <Layout>{children}</Layout>
+        <Analytics />
+        <SpeedInsights/>
       </body>
     </html>
   );
