@@ -28,7 +28,7 @@ export default function Resume() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-[#1e293b]/30 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 shadow-lg text-center text-gray-300"
         >
-          <p className="mb-6">Resume content or download link will go here.</p>
+          <p className="mb-6">View or download my resume below:</p>
           {/* Example Download Button - update href to your actual resume file */}
           <a 
             href="/path/to/your/resume.pdf" // <-- IMPORTANT: Update this path! 

@@ -18,7 +18,7 @@ export default function Home() {
               Hi, I'm <span className="text-white">Befikadu Tesfaye</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Cybersecurity Researcher and Ethical Hacker
+              Cybersecurity Researcher, Developer and Ethical Hacker
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
