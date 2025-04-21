@@ -15,40 +15,88 @@ interface Badge {
 
 // Sample badge data (replace with your actual data)
 const sampleBadges: Badge[] = [
+
+  // Google Badges
+
   {
     id: 1,
-    name: 'CyberTalents SOC Analyst',
-    issuer: 'CyberTalents',
-    imageUrl: '/certs/cybertalents-socA.png',
-    link: '#',
+    name: 'Google Cybersecurity Professional',
+    issuer: 'Google',
+    imageUrl: '/certs/banner1.png',
+    link: 'https://www.credly.com/badges/6cf8e19e-2b8b-4ff3-acec-9397c08fd147/public_url',
   },
+  
+   // tryhackme badges
+
   {
     id: 2,
-    name: 'Cybersecurity Bootcamp',
-    issuer: 'CyberTalents',
-    imageUrl: '/certs/cybertalents-cysec-bootcamp.jpg',
-    link: '#',
+    name: 'Being competent in Linux',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/linux.svg',
+    link: 'https://tryhackme.com/p/0xfke',
   },
   {
     id: 3,
-    name: 'Google Cybersecurity Professional',
-    issuer: 'Coursera / Google',
-    imageUrl: '/certs/Gcsp.png',
-    link: '#',
+    name: 'Hacking into Windows via EternalBlue',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/blue.svg',
+    link: 'https://tryhackme.com/p/0xfke',
   },
    {
     id: 4,
-    name: 'Intro to Cybersecurity',
-    issuer: 'NYU / Coursera',
-    imageUrl: '/certs/NYU1.png',
-    link: '#',
+    name: 'Bronze League 1st place',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/league-bronze.svg',
+    link: 'https://tryhackme.com/p/0xfke',
   },
    {
     id: 5,
-    name: 'Cyber Attack Countermeasures',
-    issuer: 'NYU / Coursera',
-    imageUrl: '/certs/NYU2.png',
-    link: '#',
+    name: 'Completing Advent of Cyber 2024!',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/aoc5.svg',
+    link: 'https://tryhackme.com/p/0xfke',
+  },
+  {
+    id: 6,
+    name: 'Introduction to Security Engineering',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/introtosecurityengineering.svg',
+    link: 'https://tryhackme.com/p/0xfke',
+  },
+  {
+    id: 7,
+    name: 'Hacking for 90 days in a row',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/streak90.svg',
+    link: 'https://tryhackme.com/p/0xfke',
+  },
+  {
+    id: 8,
+    name: 'Mastering Windows Privilege Escalation',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/windowsprivesc.svg',
+    link: 'https://tryhackme.com/p/0xfke',
+  },
+  {
+    id: 9,
+    name: 'Security Awareness',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/securityawareness.svg',
+    link: 'https://tryhackme.com/p/0xfke',
+  },
+  {
+    id: 10,
+    name: 'Mr. Robot',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/mrrobot.svg',
+    link: 'https://tryhackme.com/p/0xfke',
+  },
+  {
+    id: 11,
+    name: 'OhSINT',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/ohsint.svg',
+    link: 'https://tryhackme.com/p/0xfke',
   },
   // Add more badges as needed
 ];
