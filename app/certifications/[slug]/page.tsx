@@ -21,6 +21,9 @@ const certifications = {
       "Gain hands-on experience with Python, Linux, and SQL."
     ]
   },
+
+  // cybertalents
+
   CCSOCA: {
     title: "Cybertalents Certified SOC Analyst (CCSOCA)",
     issuer: "Cybertalents",
@@ -36,6 +39,38 @@ const certifications = {
         "Work with SOC tools and technologies in simulated attack environments"
     ]
   },
+
+
+
+  CCTH: {
+    title: "CyberTalents Certified Threat Hunter (CCTH)",
+    issuer: "Cybertalents",
+    date: "2025",
+    image: "/certs/CyberTalents-Certified-Threat-Hunter.png",
+    link: "https://cybertalents.com/certifications/7c5d9231-07c6-4732-a94e-34d71be14140", 
+    description: "As a Certified Threat Hunter, I have acquired advanced threat detection and response capabilities, specializing in proactively identifying and analyzing cyber threats and ongoing intrusions.",
+    skills: ["Cyber Threat Hunting (CTH)", "IoCs, YARA, and Sigma Rules", "STIX/TAXII and Kestrel", "Hunting with Wireshark", "Powershell Hunting Tools"],
+    details: [
+        "Understanding the principles of threat hunting and its role in cybersecurity",
+        "Utilizing various tools and techniques for threat detection and analysis"
+      ] 
+  },
+
+  CCOSINTA: {
+    title: "CyberTalents Certified OSINT Analyst (CCOSINTA)",
+    issuer: "Cybertalents",
+    date: "2025",
+    image: "/certs/CyberTalents-Certified-OSINT-Analyst.png",
+    link: "https://cybertalents.com/certifications/9844b28e-af93-4089-b6db-827c846583f7", // Replace with actual link if available
+    description: "This certification validates my ability to conduct intelligence-driven operations that support both offensive and defensive cybersecurity strategies.",
+    skills: ["OSD, OSIF, and OSINT", "Website Analysis", "SOCMINT", "IMINT"],
+    details: [
+        "Understanding the principles of Open Source Intelligence (OSINT) and its applications in cybersecurity",
+        "Conducting effective OSINT investigations using various tools and techniques",
+        "Analyzing and interpreting data from multiple sources to derive actionable intelligence"
+      ]
+  },
+
   ICS: {
     title: "Introduction to Cybersecurity Bootcamp (ICS)",
     issuer: "Cybertalents",
@@ -51,6 +86,8 @@ const certifications = {
         "Gaining exposure to offensive security concepts and methodologies used by ethical hackers and security professionals"
     ]
   },
+
+  // new york university
 
   ICA: {
     title: "Introduction to Cyber Attacks",

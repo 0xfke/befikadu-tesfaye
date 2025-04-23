@@ -26,6 +26,28 @@ export default function Certifications() {
       description: "The certification validates my ability to understand and operate within a SOC environment, including real-time threat monitoring, incident response, and cyberattack mitigation.",
       skills: ["Security Information and Event Management", "Splunk", "Digital Forensics", "Incident Response", "Web Security Analysis", "Endpoint Security", "Network Security"]
     },
+
+    {
+      slug: "CCTH",
+      title: "CyberTalents Certified Threat Hunter (CCTH)",
+      issuer: "Cybertalents",
+      date: "2025",
+      image: "/certs/CyberTalents-Certified-Threat-Hunter.png",
+      description: "As a Certified Threat Hunter, I have acquired advanced threat detection and response capabilities, specializing in proactively identifying and analyzing cyber threats and ongoing intrusions.",
+      skills: ["Cyber Threat Hunting (CTH)", "IoCs, YARA, and Sigma Rules", "STIX/TAXII and Kestrel", "Hunting with Wireshark", "Powershell Hunting Tools"]
+    },
+
+    {
+      slug: "CCOSINTA",
+      title: "CyberTalents Certified Threat Hunter (CCTH)",
+      issuer: "Cybertalents",
+      date: "2025",
+      image: "/certs/CyberTalents-Certified-OSINT-Analyst.png",
+      description: "This certification validates my ability to conduct intelligence-driven operations that support both offensive and defensive cybersecurity strategies.",
+      skills: ["OSD, OSIF, and OSINT", "Website Analysis", "SOCMINT", "IMINT"]
+    },
+
+
     {
       slug: "ICS",
       title: "Introduction to Cybersecurity Bootcamp (ICS)",
@@ -35,6 +57,8 @@ export default function Certifications() {
       description: "This certification from CyberTalents validates my skills in cybersecurity, including Traffic Analysis, OWASP, Steganography, Burp Suite, and web security. The bootcamp provided hands-on experience in analyzing network traffic, identifying web vulnerabilities, and using advanced tools to enhance security measures.",
       skills: ["Traffic Analysis", "OWASP", "Steganography", "Burp Suite", "web security"]
     },
+
+    
 
     // New York University Certification
     {
