@@ -39,7 +39,7 @@ export default function Certifications() {
 
     {
       slug: "CCOSINTA",
-      title: "CyberTalents Certified Threat Hunter (CCTH)",
+      title: "CyberTalents Certified OSINT Analyst",
       issuer: "Cybertalents",
       date: "2025",
       image: "/certs/CyberTalents-Certified-OSINT-Analyst.png",
