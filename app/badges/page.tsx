@@ -129,7 +129,7 @@ export default function Badges() {
             Achievements & Badges
           </h1>
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
-            Recognitions, certifications, and badges earned, grouped by issuer.
+            Recognitions, certifications, and badges earned
           </p>
         </motion.div>
 

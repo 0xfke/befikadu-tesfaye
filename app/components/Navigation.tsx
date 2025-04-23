@@ -29,7 +29,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="text-cyan-400 font-bold text-xl">
-            Skidi
+            Befikadu T.
           </Link>
 
           {/* Desktop Navigation */}
