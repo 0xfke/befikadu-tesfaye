@@ -28,10 +28,10 @@ export default function Resume() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-[#1e293b]/30 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 shadow-lg text-center text-gray-300"
         >
-          <p className="mb-6">View or download my resume below:</p>
+          <p className="mb-6"></p>
           {/* Example Download Button - update href to your actual resume file */}
           <a 
-            href="/path/to/your/resume.pdf" // <-- IMPORTANT: Update this path! 
+            href="Resume/Befikadu_Tesfaye_Resume.pdf" // <-- IMPORTANT: Update this path! 
             download
             className="inline-block px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
           >
