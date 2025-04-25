@@ -16,6 +16,7 @@ export default function Home() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-cyan-400 mb-6">
               Hi, I'm <span className="text-white">Befikadu Tesfaye</span>
+              <meta name="google-site-verification" content="jBs0Du8T1MgAnGsm6aFw9ggRnE-plX9WYcgD1LRkm7s" />
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Cybersecurity Researcher and Ethical Hacker
