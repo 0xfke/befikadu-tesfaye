@@ -98,6 +98,13 @@ const sampleBadges: Badge[] = [
     imageUrl: 'https://assets.tryhackme.com/img/badges/ohsint.svg',
     link: 'https://tryhackme.com/p/0xfke',
   },
+  {
+    id: 12,
+    name: 'Pentesting Principles',
+    issuer: 'Try Hack Me',
+    imageUrl: 'https://assets.tryhackme.com/img/badges/introtooffensivesecurity.svg',
+    link: 'https://tryhackme.com/0xfke/badges/intro-to-pentesting',
+  },
   // Add more badges as needed
 ];
 
